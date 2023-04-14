@@ -11,20 +11,24 @@
 - Utilizador
   - id
   - Nome
-  - Idade
-  - id_Vizinhos(PK_Vizinhos)
-- Vizinhos
-  - id
-  - Distancia
-  - id_utilizador(PK_Utilizador)
-- LocalizcaoAtual
-  - Id
+  - DataNascimento
+  - id_Utilizador_Amigos(PK_Utilizador_Amigos)
+- Utilizador_Amigos
   - id_Utilizador(PK_Utilizador)
+  - id_Amigos(PK_Amigos)
+- Amigos
+  - id
+  - id_Utilizador_Amigos(PK_Utilizador_Amigos)
+- Localizcao
+  - Id
+  - Ativo
+  - DataAtual
   - DataExpira
+  - id_Utilizador(PK_Utilizador)
 - Notificação
   - id 
+  - Enviado
   - id_Utilizador (PK_Utilizador)
-  - Visuaçizado
   - id_Mensagem(PK_Mensagem)
 - Mensagem
   - id
