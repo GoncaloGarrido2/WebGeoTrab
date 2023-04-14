@@ -26,7 +26,7 @@
   - id_Utilizador (PK_Utilizador)
   - Visuaçizado
   - id_Mensagem(PK_Mensagem)
-- Mensagen
+- Mensagem
   - id
   - Titulo
   - Mensagem
