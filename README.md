@@ -6,6 +6,14 @@
 ## Word 
 - User cases
 - Print do Diagrama ER.
+## UserCases
+criação de um utilizador 
+O utilizador adiciona amigos
+adiciona uma localização 
+ver lista de localizações 
+recebe notificação de amigos próximos 
+ver lista de amigos 
+altera a localização 
 ## Diagrama ER
 ### Tabelas 
 - Utilizador
