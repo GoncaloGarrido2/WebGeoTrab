@@ -8,12 +8,13 @@
 - Print do Diagrama ER.
 ## UserCases
 criação de um utilizador 
-O utilizador adiciona amigos
-adiciona uma localização 
-ver lista de localizações 
-recebe notificação de amigos próximos 
-ver lista de amigos 
-altera a localização 
+- O utilizador adiciona amigos;
+- Adiciona uma localização;
+- Ver lista de localizações; 
+- Recebe notificação de amigos próximos; 
+- Ver lista de amigos; 
+- Altera a localização; <br><br>
+O aplicativo de rede social permite que o utilizador adicione amigos, compartilhe a localização e receba notificações quando amigos próximos estiverem por perto. O utilizador pode ver a lista de amigos e locais compartilhados, além de poder alterar sua própria localização. O objetivo do aplicativo é manter o utilizador conectado e informado sobre a localização dos amigos e familiares.
 ## Diagrama ER
 ### Tabelas 
 - Utilizador
