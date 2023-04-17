@@ -22,13 +22,7 @@ O aplicativo de rede social permite que o utilizador adicione amigos, compartilh
   - Nome
   - DataNascimento
   - id_Utilizador_Amigos(PK_Utilizador_Amigos)
-- Utilizador_Amigos
-  - id_Utilizador(PK_Utilizador)
-  - id_Amigos(PK_Amigos)
-- Amigos
-  - id
-  - id_Utilizador_Amigos(PK_Utilizador_Amigos)
-- Localizcao
+- Localizacao
   - Id
   - Ativo
   - DataAtual
