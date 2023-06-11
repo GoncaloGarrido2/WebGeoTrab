@@ -16,6 +16,9 @@ criação de um utilizador
 - Altera a localização; <br><br>
 O aplicativo de rede social permite que o utilizador adicione amigos, compartilhe a localização e receba notificações quando amigos próximos estiverem por perto. O utilizador pode ver a lista de amigos e locais compartilhados, além de poder alterar sua própria localização. O objetivo do aplicativo é manter o utilizador conectado e informado sobre a localização dos amigos e familiares.
 ## Diagrama ER
+### Imagem
+![DiagramaProjeto](https://github.com/GoncaloGarrido2/WebGeoTrab/assets/50460047/57ebf323-8948-43ce-a517-62b0fa64a52f)
+
 ### Tabelas 
 - Utilizador
   - id
@@ -27,6 +30,7 @@ O aplicativo de rede social permite que o utilizador adicione amigos, compartilh
   - Ativo
   - DataAtual
   - DataExpira
+  - Localização
   - id_Utilizador(PK_Utilizador)
 - Notificação
   - id 
