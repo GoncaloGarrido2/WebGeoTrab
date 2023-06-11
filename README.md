@@ -30,6 +30,7 @@ O aplicativo de rede social permite que o utilizador adicione amigos, compartilh
   - Ativo
   - DataAtual
   - DataExpira
+  - Localização
   - id_Utilizador(PK_Utilizador)
 - Notificação
   - id 
