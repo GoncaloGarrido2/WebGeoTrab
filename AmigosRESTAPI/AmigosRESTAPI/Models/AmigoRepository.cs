@@ -11,11 +11,11 @@ namespace AmigosRESTAPI.Models {
 
             List<Utilizador> utilizadores = new List<Utilizador>();
 
-            using (NpgsqlConnection connection = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["NomeDaConexao"].ConnectionString))
+            using (NpgsqlConnection connection = new NpgsqlConnection("Server=localhost;Port=5432;Database=ts_AppAmigos;User Id=postgres;Password=1234;"))
             {
                 connection.Open();
 
-                string sql = "SELECT * FROM Utilizador";
+                string sql = "SELECT Id,Nome,DataNascimento,IdLocalizacao FROM Utilizador";
                 NpgsqlCommand command = new NpgsqlCommand(sql, connection);
 
                 NpgsqlDataReader reader = command.ExecuteReader();
@@ -36,6 +36,11 @@ namespace AmigosRESTAPI.Models {
 
             Utilizador[] vResponse = new Utilizador[utilizadores.Count];
 
+            for (int i = 0; i < utilizadores.Count; i++)
+            {
+                vResponse[i] = utilizadores[i];
+            }
+
             return vResponse;
         }
         public IEnumerable<Utilizador> GetAll(int pId)
@@ -44,7 +49,7 @@ namespace AmigosRESTAPI.Models {
             {
                 connection.Open();
 
-                string sql = "SELECT * FROM Utilizador WHERE id=@id";
+                string sql = "SELECT Id,Nome,DataNascimento,IdLocalizacao FROM Utilizador WHERE id=@id";
                 NpgsqlCommand command = new NpgsqlCommand(sql, connection);
                 command.Parameters.AddWithValue("@id", pId);
 
@@ -72,12 +77,10 @@ namespace AmigosRESTAPI.Models {
                     return null;
                 }
             }
-
-            
         }
         public IEnumerable<Utilizador> GetAll(int id, string nome, string dataNascimento)
         {
-            using (NpgsqlConnection connection = new NpgsqlConnection(ConfigurationManager.ConnectionStrings["NomeDaConexao"].ConnectionString))
+            using (NpgsqlConnection connection = new NpgsqlConnection("Server=localhost;Port=5432;Database=ts_AppAmigos;User Id=postgres;Password=1234;"))
             {
                 connection.Open();
 
@@ -85,7 +88,7 @@ namespace AmigosRESTAPI.Models {
                 NpgsqlCommand command = new NpgsqlCommand(sql, connection);
                 command.Parameters.AddWithValue("@idLocalizacao", id);
                 command.Parameters.AddWithValue("@nome", nome);
-                command.Parameters.AddWithValue("@dataNascimento", dataNascimento);
+                command.Parameters.AddWithValue("@dataNascimento", new DateTime(Convert.ToInt32(dataNascimento.Split('-')[0]), Convert.ToInt32(dataNascimento.Split('-')[1]), Convert.ToInt32(dataNascimento.Split('-')[2]) ) );
 
                 command.ExecuteNonQuery();
             }

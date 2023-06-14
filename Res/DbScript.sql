@@ -1,6 +1,6 @@
 CREATE TABLESPACE "ts_AppAmigos"
   OWNER postgres
-  LOCATION 'C:\Users\Diogo Carneiro\Desktop\IPMAIA\Licenciatura\3ºano\webgeo';
+  LOCATION 'D:\GitHub\WebGeoTrab\Res\webgeo';
 
   
 create database AppAmigos
