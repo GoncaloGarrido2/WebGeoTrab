@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Web;
 using System.Web.Http;
 
@@ -17,13 +18,36 @@ namespace AmigosRESTAPI.Controllers {
         // GET:
         // exemplo http://localhost/AmigosRESTAPI/api/amigo
         [Route("api/amigo")]
-        public IEnumerable<Amigo> GetAll() {
+        public IEnumerable<Utilizador> GetAll() {
             return repository.GetAll();
         }
         [Route("api/amigouni")]
-        public IEnumerable<Amigo> GetAll(int id)
+        public IEnumerable<Utilizador> GetAll(int id)
         {
             return repository.GetAll(id);
         }
+        [HttpGet]
+        [Route("api/amigoinsert")]
+        public IEnumerable<Utilizador> Insert(int id, string nome, string dataNascimento)
+        {
+            return repository.GetAll(id, nome, dataNascimento);
+        }
+        //Localizações
+        //[Route("api/amigo")]
+        //public IEnumerable<Utilizador> GetAll()
+        //{
+        //    return repository.GetAll();
+        //}
+        //[Route("api/amigouni")]
+        //public IEnumerable<Utilizador> GetAll(int id)
+        //{
+        //    return repository.GetAll(id);
+        //}
+        //[HttpGet]
+        //[Route("api/amigoinsert")]
+        //public IEnumerable<Utilizador> Insert(int id, string nome, string dataNascimento)
+        //{
+        //    return repository.GetAll(id, nome, dataNascimento);
+        //}
     }
 }

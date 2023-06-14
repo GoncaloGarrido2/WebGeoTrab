@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace AmigosRESTAPI.Models {
-    public interface IAmigoRepository {
-        IEnumerable<Amigo> GetAll();
-        IEnumerable<Amigo> GetAll([FromBody] int pId);
+    public interface IAmigoRepository
+    {
+        IEnumerable<Utilizador> GetAll();
+        IEnumerable<Utilizador> GetAll([FromBody] int pId);
+        IEnumerable<Utilizador> GetAll(int id, string nome, string dataNascimento);
     }
 }

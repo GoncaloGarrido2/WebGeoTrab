@@ -13,6 +13,7 @@ CREATE EXTENSION postgis;
 
 CREATE TABLE Utilizador (
     id SERIAL PRIMARY KEY,
+	idLocalizacao SERIAL NOT NULL,
     Nome VARCHAR(255) NOT NULL,
     DataNascimento DATE NOT NULL
 );
