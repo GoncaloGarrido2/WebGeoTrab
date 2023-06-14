@@ -20,6 +20,10 @@ namespace AmigosRESTAPI.Controllers {
         public IEnumerable<Amigo> GetAll() {
             return repository.GetAll();
         }
-
+        [Route("api/amigouni")]
+        public IEnumerable<Amigo> GetAll(int id)
+        {
+            return repository.GetAll(id);
+        }
     }
 }

@@ -13,5 +13,11 @@ namespace AmigosRESTAPI.Models {
                 new Amigo {IdAmigo = 1003, Nome = "Vilaça"}
             };
         }
+        public IEnumerable<Amigo> GetAll(int pId)
+        {
+            return new Amigo[] {
+                new Amigo {IdAmigo = 1000, Nome = "Zeferino"}
+            };
+        }
     }
 }
